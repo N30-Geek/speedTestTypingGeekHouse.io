@@ -18,8 +18,8 @@ const typingText = document.querySelector(".quote"),
 
 const errorsValue = document.querySelector(".errors-value");
 const cmpvalue = document.querySelector(".cpm-value");
-const accuracyValue = document.querySelector(".accuracy-value");
-const wpmValue = document.querySelector(".wmp-value");
+const accuracyValue = document.querySelector(".accurracy-value");
+const wpmValue = document.querySelector(".wpm-value");
 
 let timer,
     maxTime = 60,
@@ -76,7 +76,7 @@ function initTyping() {
         cpmTag.innerText = charIndex - mistakes;
         correctTyped = charIndex - mistakes;
         accurecy = Math.round((correctTyped / charIndex) * 100);
-        accurecyWord.innerText = accurecy;
+        accuracyValue.innerText = accurecy;
 
         pup_up(wpm, charIndex - mistakes, accurecy, mistakes);
         // gestion scrolling
@@ -132,7 +132,7 @@ function pup_up(wpm, cpm, accuracy, errors) {
     cmpvalue.innerText = cpm;
     errorsValue.innerText = errors;
     accuracyValue.innerText = accuracy;
-    wpmValue = wpm;
+    wpmValue.innerText = wpm;
 }
 
 
