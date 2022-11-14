@@ -16,6 +16,10 @@ const typingText = document.querySelector(".quote"),
     cpmTag = document.querySelector(".curr_cpm"),
     accurecyWord = document.querySelector(".curr_accuracy");
 
+const errorsValue = document.querySelector(".errors-value");
+const cmpvalue = document.querySelector(".cpm-value");
+const accuracyValue = document.querySelector(".accuracy-value");
+const wpmValue = document.querySelector(".wmp-value");
 
 let timer,
     maxTime = 60,
@@ -74,10 +78,9 @@ function initTyping() {
         accurecy = Math.round((correctTyped / charIndex) * 100);
         accurecyWord.innerText = accurecy;
 
-
+        pup_up(wpm, charIndex - mistakes, accurecy, mistakes);
         // gestion scrolling
-        console.log(characters[charIndex].clientTop)
-        // if (characters[charIndex])
+        console.log(quote.scrollTop)
     } else {
         popUp_result()
     }
@@ -122,6 +125,16 @@ function popUp_result() {
         resetGame();
     });
 }
+
+// the pop-up code
+
+function pup_up(wpm, cpm, accuracy, errors) {
+    cmpvalue.innerText = cpm;
+    errorsValue.innerText = errors;
+    accuracyValue.innerText = accuracy;
+    wpmValue = wpm;
+}
+
 
 loadParagraph();
 inpField.addEventListener("input", initTyping);

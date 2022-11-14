@@ -10,18 +10,28 @@
 <body>
     <div class="contenair">
         <div class="backBox">
-            <div class="box">
+            <div class="box" draggable="true">
                 <div class="head">
-                    <h3> boite de dialogue ici </h3>
+                    <h3> RESULTATS DE TEST </h3>
                     <div class="button-close">
                         <p>x</p>
                     </div>
                 </div>
                 <div class="contenues">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nemo soluta eos, ad vitae quia.
-                    Culpa
-                    asperiores odit pariatur expedita, ab excepturi ea laboriosam, esse, quo tempora repudiandae rerum
-                    voluptas.
+                    <div class="boxOne">
+                        <div class="otherInfo">
+                            <span>Errors : <span class="errors-value"></span></span>
+                            <span>CMP : <span class="cpm-value"></span></span>
+                            <span>Accuracy : <span class="accurracy-value"></span></span>
+                        </div>
+                        <div class="wpm">
+                            <h2>WPM</h2>
+                            <span class="wpm-value">245</span>
+                        </div>
+                    </div>
+                    <div class="boxTwo">
+                        <span class="wrong-char"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,6 +92,7 @@
     </div>
     <script src="js/paragraphs.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/gestionPupBox.js"></script>
 </body>
 
 </html>
